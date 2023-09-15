@@ -1,5 +1,8 @@
+Want to share stable diffusion to internet?
+Try this:
+
 1. Generate .htpasswd файл на https://hostingcanada.org/htpasswd-generator/
-  - скопировать эти данные в .htpasswd файл
-2. Открыть порт 7860 на NAT
+  - and copy generated data to  .htpasswd file
+2. Open 7860 port on NAT (in the router settings page)
 3. docker run -d -p 7860:80 -v %cd%/nginx.conf:/etc/nginx/nginx.conf:ro -v %cd%/.htpasswd:/etc/nginx/.htpasswd:ro nginx
 
